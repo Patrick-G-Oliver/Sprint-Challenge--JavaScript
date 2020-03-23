@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is that the former (.forEach) iterates over the items in an array (which are then acted upon by the function provided to .forEach), while the latter (.map) not only iterates over each array item (again acted upon by a provided function), but also produces a new array from the results (leaving the original array intact and unchanged).
+
 2. What is the difference between a function and a method?
+
+While both functions and methods are functions, methods are functions that are also object properties (i.e. a function that appears on an object), while functions exist independently, able to be accessed without reference to an object.
 
 3. What is closure?
 
+Closure, or a closure, is the combination of a function and a record of all the variables that are within the lexical scope of that function when it is declared. For example, in the case of a nested fucntion (i.e. a function declared within the internal scope of another function), the fact that the nested function is a closure (as are all functions, even when declared in the global scope) gives it access to any variables within the the outer, parent function's local scope (as well as variables that exist in scopes outside the parent fucntion, up to and including the global scope). This means that a function returned by a function retains access to all the variables contained within its parent function (or functions). 
+
 4. Describe the four rules of the 'this' keyword.
 
+1) Window/Global Object Binding: Since the ‘this’ keyword points to the context in which it appears, when the ‘this’ keyword is called in the global scope it points to the window (i.e. the entire browser environment in which JS is run) because that is where the function containing ‘this’ is being run.
+2) Implicit Binding: When an object method is called (e.g. myObj.add1(2); ), the object appearing to the left of the dot (in the example, myObj) is the referent of the ‘this’ keyword when it appears within the object method.
+3) New Binding: In this case the ‘this’ keyword appears on the property creators of a constructor function and refers to the new objects (each new object individually) that will be created by the constructor function. 
+4) Explicit Binding: Here the .call or .apply function directs the ‘this’ keyword to refer to an object that is substituted for the content of an original object (assigning the ‘this’ keyword’s referent explicitly).
+
 5. Why do we need super() in an extended class?
+
+super() refers and grants access to the parent constructor’s properties. Without super() the extended class would have no way to import those properties and would effectively have to act as an independent class.
 
 ## Project Set up
 
