@@ -38,7 +38,7 @@ While both functions and methods are functions, methods are functions that are a
 
 3. What is closure?
 
-Closure is what occurs when the execution of code within a function (i.e. between its curly brackets) is able to (and does) reach out its local (function) scope (demarcated by the curly brackets) to access an element or elements either within a surrounding local (function) scope or the global scope within which the function or functions exist. Importantly, this process is not possible in the other direction, that is, elements cannot be accessed by reaching into a function from a surrounding local or global scope.
+Closure, or a closure, is the combination of a function and a record of all the variables that are within the lexical scope of that function when it is declared. For example, in the case of a nested fucntion (i.e. a function declared within the internal scope of another function), the fact that the nested function is a closure (as are all functions, even when declared in the global scope) gives it access to any variables within the the outer, parent function's local scope (as well as variables that exist in scopes outside the parent fucntion, up to and including the global scope). This means that a function returned by a function retains access to all the variables contained within its parent function (or functions). 
 
 4. Describe the four rules of the 'this' keyword.
 
